@@ -10,7 +10,7 @@ type DB struct {
 	db *leveldb.DB
 }
 
-func newDatabase(path string) (*DB, error) {
+func NewDatabase(path string) (*DB, error) {
 	db, err := leveldb.OpenFile(path, nil)
 	if err != nil {
 		return nil, err
@@ -32,4 +32,8 @@ func (d *DB) GetBlock(num uint64) (string, error) {
 	}
 
 	return string(data), nil
+}
+
+func (d *DB) Close() {
+	d.db.Close()
 }
