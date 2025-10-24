@@ -1,6 +1,5 @@
 # mini-eth-node
 
-```markdown
 # 🪙 Mini Ethereum Node
 
 A lightweight Ethereum "light node" built in Go.  
@@ -19,6 +18,7 @@ It connects to a public Ethereum RPC endpoint, periodically fetches the latest b
 ---
 
 ## 🧱 Project Structure
+
 ```
 
 mini-eth-node/
@@ -29,7 +29,7 @@ mini-eth-node/
 ├── storage.go # LevelDB wrapper for saving blocks
 └── sync.go # Periodic sync logic
 
-````
+```
 
 ---
 
@@ -39,7 +39,7 @@ mini-eth-node/
 git clone https://github.com/akenbay/mini-eth-node.git
 cd mini-eth-node
 go mod tidy
-````
+```
 
 Dependencies:
 
